@@ -1,0 +1,31 @@
+CREATE SCHEMA IF NOT EXISTS test;
+USE test;
+
+create table student (
+    id              INT       NOT NULL PRIMARY KEY,
+    name            VARCHAR(50)    NOT NULL,
+    age             INT          NOT NULL,
+    group_t           INT          NOT NULL,
+    average_mark    DOUBLE         NOT NULL
+);
+
+insert into student (id, name, age, group_t, average_mark) values (1, 'Student1', 20, 107312, 6.3);
+insert into student (id, name, age, group_t, average_mark) values (2, 'Student2', 21, 107412, 7.3);
+insert into student (id, name, age, group_t, average_mark) values (3, 'Student3', 22, 107612, 5.2);
+insert into student (id, name, age, group_t, average_mark) values (4, 'Student4', 19, 107212, 7.8);
+insert into student (id, name, age, group_t, average_mark) values (5, 'Student5', 18, 107112, 9.0);
+insert into student (id, name, age, group_t, average_mark) values (6, 'Student6', 20, 107313, 4.7);
+insert into student (id, name, age, group_t, average_mark) values (7, 'Student7', 20, 107312, 7.3);
+insert into student (id, name, age, group_t, average_mark) values (8, 'Student8', 23, 107316, 9.1);
+insert into student (id, name, age, group_t, average_mark) values (9, 'Student9', 26, 107715, 8.2);
+insert into student (id, name, age, group_t, average_mark) values (10, 'Student10', 17, 107612, 5.9);
+insert into student (id, name, age, group_t, average_mark) values (11, 'Student11', 22, 107352, 6.3);
+
+
+TRUNCATE TABLE student;
+
+DROP TABLE student;
+
+select * from student;
+
+DELETE FROM student WHERE id = 9
